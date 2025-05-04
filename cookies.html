@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CannaLog - Cookie & Local Storage Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-primary { background-color: #00796B; } /* Teal */
+        .text-primary { color: #00796B; }
+        .bg-base { background-color: #F3F4F6; } /* Off-white background */
+        .text-base-content { color: #111827; } /* Near black text */
+        .text-muted { color: #6B7280; } /* Medium grey */
+        h3 { margin-bottom: 0.75rem; margin-top: 1.5rem; font-size: 1.25rem; font-weight: 600; color: #1f2937; /* gray-800 */ border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem;}
+        p { margin-bottom: 1rem; line-height: 1.6;}
+        li { margin-bottom: 0.5rem; }
+        ul { list-style-position: inside; margin-left: 1rem;}
+        ol { list-style-position: inside; }
+         /* Language switcher style */
+        .lang-button { cursor: pointer; padding: 0.25rem 0.5rem; border-radius: 0.25rem; margin-left: 0.5rem; font-weight: 500; }
+        .lang-button.active { background-color: #00796B; color: white; }
+        .lang-button:not(.active) { background-color: #e5e7eb; color: #374151; }
+        .lang-content { display: none; } .lang-content.active { display: block; }
+    </style>
+</head>
+<body class="bg-base text-base-content antialiased">
+
+    <div class="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
+
+         <div class="flex justify-between items-center mb-6">
+             <div class="inline-block bg-primary text-white rounded-lg p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-7.963.057l-2.387.477a2 2 0 00-1.022.547m3.228 4.212a2 2 0 001.79.347l1.448-.145a2 2 0 011.086.047l1.448.145a2 2 0 001.79-.347m-5.466 4.212l2.733-3.644m-5.466 0l2.733 3.644" />
+                  </svg>
+            </div>
+            <div>
+                <button id="lang-en-US" class="lang-button" onclick="setLanguage('en-US')">EN</button>
+                <button id="lang-pt-BR" class="lang-button" onclick="setLanguage('pt-BR')">PT</button>
+            </div>
+        </div>
+
+        <header class="mb-8 md:mb-12 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-primary mb-2">CannaLog</h1>
+            <div lang="en-US" class="lang-content">
+                <h2 class="text-2xl md:text-3xl font-semibold text-gray-800">Cookie & Local Storage Policy</h2>
+                <p class="text-muted mt-2">Last Updated: May 4, 2025</p>
+            </div>
+             <div lang="pt-BR" class="lang-content">
+                <h2 class="text-2xl md:text-3xl font-semibold text-gray-800">Política de Cookies e Armazenamento Local</h2>
+                <p class="text-muted mt-2">Última Atualização: 4 de Maio de 2025</p>
+            </div>
+        </header>
+
+        <main class="bg-white p-6 md:p-8 rounded-lg shadow-sm text-gray-700">
+
+            <div lang="en-US" class="lang-content">
+                <p>This policy explains how CannaLog ("we," "us," or "our") uses technologies like local storage (similar to cookies on websites) within our mobile application ("App").</p>
+                <h3>What are Cookies and Local Storage?</h3>
+                <p>Cookies are small text files stored on your device when you visit websites. Mobile applications often use similar technologies, such as <strong>Local Storage</strong>, <strong>AsyncStorage</strong> (in React Native), or device identifiers, to store small amounts of data directly on your device. For simplicity, we may refer to these technologies collectively as "cookies" or "local storage" in this policy.</p>
+                <h3>How We Use Local Storage and Similar Technologies</h3>
+                <p>CannaLog uses these technologies for essential functions and to improve your experience. This may include:</p>
+                <ol class="list-decimal list-inside space-y-2 mb-4">
+                    <li>
+                        <strong>Essential Operations:</strong>
+                        <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
+                            <li><strong>Authentication:</strong> To keep you logged in securely and remember your session status (e.g., storing authentication tokens provided by Firebase Authentication). This is necessary for the App to function correctly.</li>
+                            <li><strong>Preferences:</strong> To remember your settings or preferences within the App (e.g., display settings, potentially units of measurement if implemented).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Performance and Analytics:</strong>
+                        <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
+                            <li><strong>Firebase Analytics:</strong> We use Firebase Analytics to understand how users interact with our App. This helps us identify popular features, diagnose problems, and improve the App. Firebase Analytics may collect anonymous or pseudonymous data, potentially using device identifiers or similar technologies assigned by Firebase. This data includes usage patterns, session duration, device type, operating system, and general location information (like country). It does <strong>not</strong> typically include your personal cultivation data unless aggregated anonymously.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Functionality:</strong>
+                        <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
+                            <li><strong>Offline Data (Potential Future Use):</strong> We might use local storage in the future to cache some of your data temporarily, allowing limited functionality when you are offline. [Specify if implemented].</li>
+                            <li><strong>Remote Config:</strong> We use Firebase Remote Config to manage feature flags and experiments (like the deletion mode). The SDK may store fetched configuration values locally for quick access.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <h3>Third-Party Services</h3>
+                <ul class="list-disc list-inside space-y-1">
+                    <li><strong>Firebase:</strong> As mentioned, we use various Firebase services (Authentication, Firestore, Storage, Analytics, Remote Config). These services are provided by Google and may use their own identifiers or storage mechanisms governed by Google's Privacy Policy and Firebase terms. We rely on Firebase for core backend functionality and analytics.</li>
+                </ul>
+                <h3>Your Choices & Managing Local Storage</h3>
+                <ul class="list-disc list-inside space-y-1">
+                    <li><strong>App Functionality:</strong> Most of the local storage we use is essential for the App to function correctly (especially authentication). Disabling essential storage mechanisms might prevent you from using the App or certain features.</li>
+                    <li><strong>Device Settings:</strong> You may be able to clear application data or cache through your mobile device's settings (iOS: Settings > General > iPhone Storage > CannaLog; Android: Settings > Apps > CannaLog > Storage > Clear Cache/Clear Data). Note that clearing data will likely log you out and remove any locally stored preferences.</li>
+                    <li><strong>Analytics Opt-Out:</strong> You may be able to limit ad tracking or reset advertising identifiers in your device settings, which can impact the data collected by analytics services like Firebase Analytics. Refer to your device's documentation for specific instructions.</li>
+                </ul>
+                <h3>Changes to This Policy</h3>
+                <p>We may update this policy from time to time. We will notify you of significant changes by posting the new policy within the App or through other communication methods.</p>
+                <h3>Contact Us</h3>
+                <p>If you have questions about this policy, please contact us at: [Provide Contact Email/Method Here]</p>
+            </div>
+
+             <div lang="pt-BR" class="lang-content">
+                <p>Esta política explica como o CannaLog ("nós" ou "nosso") usa tecnologias como armazenamento local (semelhante a cookies em websites) dentro do nosso aplicativo móvel ("App").</p>
+                <h3>O que são Cookies e Armazenamento Local?</h3>
+                <p>Cookies são pequenos arquivos de texto armazenados no seu dispositivo quando você visita websites. Aplicativos móveis frequentemente usam tecnologias similares, como <strong>Armazenamento Local</strong>, <strong>AsyncStorage</strong> (no React Native), ou identificadores de dispositivo, para armazenar pequenas quantidades de dados diretamente no seu dispositivo. Para simplificar, podemos nos referir a essas tecnologias coletivamente como "cookies" ou "armazenamento local" nesta política.</p>
+                <h3>Como Usamos Armazenamento Local e Tecnologias Semelhantes</h3>
+                <p>O CannaLog usa essas tecnologias para funções essenciais e para melhorar sua experiência. Isso pode incluir:</p>
+                 <ol class="list-decimal list-inside space-y-2 mb-4">
+                    <li>
+                        <strong>Operações Essenciais:</strong>
+                        <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
+                            <li><strong>Autenticação:</strong> Para mantê-lo conectado com segurança e lembrar o status da sua sessão (por exemplo, armazenando tokens de autenticação fornecidos pelo Firebase Authentication). Isso é necessário para o funcionamento correto do App.</li>
+                            <li><strong>Preferências:</strong> Para lembrar suas configurações ou preferências dentro do App (por exemplo, configurações de exibição, potencialmente unidades de medida se implementadas).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Desempenho e Análise (Analytics):</strong>
+                        <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
+                            <li><strong>Firebase Analytics:</strong> Usamos o Firebase Analytics para entender como os usuários interagem com nosso App. Isso nos ajuda a identificar recursos populares, diagnosticar problemas e melhorar o App. O Firebase Analytics pode coletar dados anônimos ou pseudônimos, potencialmente usando identificadores de dispositivo ou tecnologias semelhantes atribuídas pelo Firebase. Esses dados incluem padrões de uso, duração da sessão, tipo de dispositivo, sistema operacional e informações gerais de localização (como país). Geralmente, <strong>não</strong> inclui seus dados pessoais de cultivo, a menos que agregados anonimamente.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Funcionalidade:</strong>
+                        <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
+                            <li><strong>Dados Offline (Uso Futuro Potencial):</strong> Podemos usar armazenamento local no futuro para armazenar em cache alguns de seus dados temporariamente, permitindo funcionalidade limitada quando você estiver offline. [Especificar se implementado].</li>
+                            <li><strong>Remote Config:</strong> Usamos o Firebase Remote Config para gerenciar flags de recursos e experimentos (como o modo de exclusão). O SDK pode armazenar valores de configuração buscados localmente para acesso rápido.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <h3>Serviços de Terceiros</h3>
+                <ul class="list-disc list-inside space-y-1">
+                    <li><strong>Firebase:</strong> Como mencionado, usamos vários serviços do Firebase (Authentication, Firestore, Storage, Analytics, Remote Config). Esses serviços são fornecidos pelo Google e podem usar seus próprios identificadores ou mecanismos de armazenamento regidos pela Política de Privacidade do Google e pelos termos do Firebase. Contamos com o Firebase para funcionalidade de backend principal e análises.</li>
+                </ul>
+                <h3>Suas Escolhas e Gerenciamento do Armazenamento Local</h3>
+                <ul class="list-disc list-inside space-y-1">
+                    <li><strong>Funcionalidade do App:</strong> A maior parte do armazenamento local que usamos é essencial para o funcionamento correto do App (especialmente autenticação). Desativar mecanismos de armazenamento essenciais pode impedi-lo de usar o App ou certos recursos.</li>
+                    <li><strong>Configurações do Dispositivo:</strong> Você pode limpar os dados do aplicativo ou o cache através das configurações do seu dispositivo móvel (iOS: Ajustes > Geral > Armazenamento do iPhone > CannaLog; Android: Configurações > Apps > CannaLog > Armazenamento > Limpar Cache/Limpar Dados). Observe que limpar os dados provavelmente o desconectará e removerá quaisquer preferências armazenadas localmente.</li>
+                    <li><strong>Opt-Out de Analytics:</strong> Você pode limitar o rastreamento de anúncios ou redefinir identificadores de publicidade nas configurações do seu dispositivo, o que pode impactar os dados coletados por serviços de análise como o Firebase Analytics. Consulte a documentação do seu dispositivo para obter instruções específicas.</li>
+                </ul>
+                <h3>Alterações a Esta Política</h3>
+                <p>Podemos atualizar esta política periodicamente. Notificaremos você sobre alterações significativas publicando a nova política dentro do App ou através de outros métodos de comunicação.</p>
+                <h3>Contate-nos</h3>
+                <p>Se você tiver dúvidas sobre esta política, entre em contato conosco em: [Fornecer E-mail/Método de Contato Aqui]</p>
+            </div>
+
+        </main>
+
+        <footer class="mt-12 pt-8 border-t border-gray-300 text-center text-muted text-sm">
+             &copy; <script>document.write(new Date().getFullYear())</script> CannaLog.
+            <span lang="en-US" class="lang-content">All rights reserved.</span>
+            <span lang="pt-BR" class="lang-content">Todos os direitos reservados.</span>
+            <p class="mt-2">
+                <a href="faq.html" class="hover:text-primary underline">FAQ</a> |
+                <a href="terms.html" class="hover:text-primary underline">
+                    <span lang="en-US" class="lang-content">Terms of Service</span>
+                    <span lang="pt-BR" class="lang-content">Termos de Serviço</span>
+                </a> |
+                <a href="privacy.html" class="hover:text-primary underline">
+                     <span lang="en-US" class="lang-content">Privacy Policy</span>
+                     <span lang="pt-BR" class="lang-content">Política de Privacidade</span>
+                </a>
+            </p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Identical JS from Terms page - include in each file
+        function setLanguage(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.style.display = 'none'; el.classList.remove('active');
+            });
+            document.querySelectorAll(`.lang-content[lang="${lang}"]`).forEach(el => {
+                el.style.display = 'block'; el.classList.add('active');
+            });
+            document.querySelectorAll('.lang-button').forEach(btn => btn.classList.remove('active'));
+            const activeButton = document.getElementById(`lang-${lang}`);
+            if (activeButton) activeButton.classList.add('active');
+            document.documentElement.lang = lang;
+            try { localStorage.setItem('selectedLang', lang); } catch (e) {}
+        }
+        function initializeLanguage() {
+            let preferredLang = 'en-US';
+            try {
+                const storedLang = localStorage.getItem('selectedLang');
+                if (storedLang && (storedLang === 'en-US' || storedLang === 'pt-BR')) { preferredLang = storedLang; }
+                else { const browserLang = navigator.language || navigator.userLanguage; if (browserLang && browserLang.startsWith('pt')) { preferredLang = 'pt-BR'; } }
+            } catch (e) { const browserLang = navigator.language || navigator.userLanguage; if (browserLang && browserLang.startsWith('pt')) { preferredLang = 'pt-BR'; } }
+            setLanguage(preferredLang);
+        }
+        document.addEventListener('DOMContentLoaded', initializeLanguage);
+    </script>
+
+</body>
+</html>
